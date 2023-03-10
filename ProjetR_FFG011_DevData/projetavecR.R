@@ -13,7 +13,9 @@ verifnum=function(num){
 
 #VERIFICATION Nom
 verifnom=function(nom){
+  if (nchar(nom)>1){ 
   k=0
+  nom=trimws(nom)
   nom1=substring(nom,1,1)
   decopositionnom=strsplit(nom,split="")
   for (i in  1:nchar(nom)){
@@ -30,11 +32,15 @@ verifnom=function(nom){
   else{
     return(FALSE)
   }
+  }else{
+    return(FALSE)
+  }
+  
   
 }
-
 #VERIFICATION PRENOM
 verifprenom=function(prenom){
+  if (nchar(prenom)>1){  
   k=0
   prenom1=substring(prenom,1,1)
   decopositionprenom=strsplit(prenom,split="")
@@ -54,9 +60,10 @@ verifprenom=function(prenom){
   }
   
 }
-
+ }
 #VERIFICATION CLASSE
 verifclasse=function(classe){
+  if (nchar(classe)>1){  
   a=TRUE
   b=TRUE
   classe=gsub(" ","",classe)
@@ -71,7 +78,7 @@ verifclasse=function(classe){
   else{
     return(FALSE)
   }
-  
+  }
 }
 
 #VERIFICATION DATE
@@ -91,27 +98,60 @@ verifdate=function(date){
   date=gsub('Decembre','12',date)
   datefinale=as.Date(date,"%d/%m/%y")
   
-  datefinale=format(datefinale,"%d/%m/%y")
+  datefinale=format(datefinale,"%d/%m/%Y")
   print(datefinale)
   
   
 }
-date='  28/fev/23'
+date='  28/mars/23'
 verifdate(date)
 #VERIFICATION NOTE
 verifnote=function(note){
   note=trimws(note)
   matiere=strsplit(note,split = '#')
   for (i in matiere){
-    mt=strsplit(i,split = '\\[')
+  a=str_replace_all(i,c("\\["=":","\\|"=":",";"=":","]"=":"))
+  print(a)
   }
-  de=""
-  for (i in mt){
-    dev=strsplit(i,split = '\\|')
-    
-  }
-  mt
-  
+  # for (i in matiere){
+  #   print()
+  #   #mt=strsplit(i,split = '\\[')
+  # }
+  # # de=""
+  # for (i in mt){
+  #   dev=strsplit(i,split = '\\|')
+  #   
+  # }
+  # mt
+  # 
   
 }
-
+note="Math[11|13:06] #Francais[08|17:12] #Anglais[13|13:12] #PC[09"
+verifnote(note)
+#IMPORTATION DE MES DONNEES
+b=read.csv('Donnees_Projet_Python_DataC5.csv',header = TRUE)
+View(b)
+#SUPPRESSION DE LA COLONNE CODE
+donnee=b[,2:7]
+View(donnee)
+d=donnee[sapply(donnee$Numero,verifnum),]
+d=d[sapply(d$Nom,verifnom),]
+d
+nrow(d)
+donnee$Date.de.naissance
+for (i in 1:length(donnee$Nom)){
+  print(verifnom(donnee$Nom[i]))
+  
+}
+for (i in 1:length(donnee$PrÃ.nom)){
+  print(verifprenom(donnee$PrÃ.nom[i]))
+  
+}
+for (i in 1:length(donnee$Classe)){
+  print(verifclasse(donnee$Classe[i]))
+  
+}
+for (i in 1:length(donnee$Date.de.naissance)){
+  print(verifdate(donnee$Date.de.naissance[i]))
+  
+}
