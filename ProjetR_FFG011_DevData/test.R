@@ -39,3 +39,32 @@ check_two_letters <- function(str) {
   return(n_letters >= 2)  # Renvoyer TRUE si la chaîne contient au moins deux lettres, et FALSE sinon
 }
 
+date='12-fev-1999'
+datedecomp=strsplit(date,split = "-")
+moisenlettre=c('janvier','fev','Mars','Decembre')
+moisenchiffre=c('01','02','03','12')
+moisenlettre[[1]][1]
+for (i in moisenlettre){
+  for (j in moisenchiffre){
+    
+    if (datedecomp[[1]][2] == i){
+      i=j
+      datedecomp[[1]][2]=j 
+    }
+  }
+  
+}
+datedecomp
+moisenlettre[2]
+moisenchiffre[2]
+datedecomp[[1]][2]=moisenchiffre[2]
+for (i in moisenlettre){
+  print(i)
+}
+
+note='Math[11|13:06] #Francais[08|17:12] #Anglais[13|13:12] #PC[09]'
+note=strsplit(note,split="#")
+s=gsub("([|\\||])",":",note)
+s=gsub("[[|]",":",note)
+#s=gsub("]|]",":",note)
+s
