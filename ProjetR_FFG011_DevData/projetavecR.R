@@ -64,13 +64,11 @@ verifprenom=function(prenom){
 #VERIFICATION CLASSE
 verifclasse=function(classe){
   if (nchar(classe)>1){  
-  a=TRUE
-  b=TRUE
+  
   classe=gsub(" ","",classe)
   classedecom=strsplit(classe,split = "")
   taille=nchar(classe)
   as.numeric(taille)
-  last=c('A','B')
   if ((classedecom[[1]][1] %in% (3:6)) & ((classedecom[[1]][taille] %in% c('A','B')))){
     return(TRUE)
     
@@ -113,6 +111,13 @@ verifnote=function(note){
   a=str_replace_all(i,c("\\["=":","\\|"=":",";"=":","]"=":"))
   print(a)
   }
+  for (i in a){
+    dev=strsplit(i,split = ":")
+    
+  }
+  for (i in dev){
+    print(i[1])
+  }
   # for (i in matiere){
   #   print()
   #   #mt=strsplit(i,split = '\\[')
@@ -136,7 +141,11 @@ donnee=b[,2:7]
 View(donnee)
 d=donnee[sapply(donnee$Numero,verifnum),]
 d=d[sapply(d$Nom,verifnom),]
-d
+d=d[sapply(d$PrÃ.nom,verifprenom),]
+View(d)
+d=d[sapply(d$Date.de.naissance,verifdate),]
+#d=d[sapply(d$Classe,verifclasse),]
+View(d)
 nrow(d)
 donnee$Date.de.naissance
 for (i in 1:length(donnee$Nom)){
