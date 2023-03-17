@@ -2,6 +2,10 @@ html{
 	background-color: moccasin;
 
 }
+p::first-letter{
+	color: red;
+	font-size: 130%;
+}
 #first{
 	margin-left: 300px ;
 	margin-right:300px;
