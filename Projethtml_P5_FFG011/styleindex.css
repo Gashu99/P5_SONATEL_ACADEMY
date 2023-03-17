@@ -1,12 +1,15 @@
 
+
 html{
 	background-image: url("indeximage.JPG");
 }
 
 nav{
-	margin-left: 100px;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 400px;
+	margin-right: 400px;
 	border: solid;
-	color: moccasin;
 	background-color: skyblue;
 }
 #TP1{
@@ -14,18 +17,21 @@ nav{
 }
 
 #TP2{
-	margin-right: 40px;
+	margin-right: 20px;
+}
+#TP3{
+	margin-right: 20px;
 }
 
 #TP4{
-	margin-right: 60px;
+	margin-right: 20px;
 }
 #TP5{
-	margin-right: 80px;
+	margin-right: 20px;
 }
 #TP6{
-	margin-right: 100px;
+	margin-right: 20px;
 }
 #TP7_1{
-	margin-right: 120px;
+	margin-right: 20px;
 }
