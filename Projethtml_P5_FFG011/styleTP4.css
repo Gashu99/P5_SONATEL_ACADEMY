@@ -1,0 +1,35 @@
+html{
+	background-color: moccasin;
+
+}
+#first{
+	margin-left: 300px ;
+	margin-right:300px;
+	background-color: red;
+	text-align: center;
+	border: solid;
+}
+#h21{
+	margin-left: 40px;
+	margin-right: 200px;
+	background-color: orange;
+	color: blue;
+	border: solid;
+	border-color: blue;
+	text-indent: 20px;
+
+}
+#second{
+	margin-left: 40px;
+	margin-right: 200px;
+	background-color: orange;
+	color: blue;
+	border: solid;
+	border-color: blue;
+}
+h2{
+	margin-left: 40px;
+	margin-right: 200px;
+	background-color: orange;
+	color: blue;
+}

@@ -1,0 +1,23 @@
+html{
+	background-image: url("background.JPG") ;
+	background-size:1000px ;
+	
+}
+#p1{
+	color: white;
+	size: 200px;
+	text-align: center;
+	font: bold;
+	margin-top: 150px;
+}
+	
+#p2{
+	color: white;
+	text-align: center;
+	size: 300px;
+}
+#p3{
+	color: white;
+	text-align: center;
+	
+}
