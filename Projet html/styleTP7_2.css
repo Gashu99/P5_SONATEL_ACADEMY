@@ -1,8 +1,9 @@
 
-.div1{
+.entiere{
 	color: darkblue;
-	width: 30px;
+	width: 300px;
 	height: 300px;
+	position: relative;
 }	
 button{
 	border-color: violet;
@@ -15,7 +16,8 @@ button{
 	border: solid;
 	border-color: darkblue;
 	background-color: darkblue;
-	top: 100px;
+	top: 50px;
+	position: absolute;
 }
 #signup{
 	text-ali7g: center;

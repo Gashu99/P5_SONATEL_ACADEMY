@@ -1,7 +1,14 @@
 
-
+h1{
+	color: white;
+	font: bold;
+}
+h2{
+	color: white;
+	
+}
 html{
-	background-image: url("indeximage.JPG");
+	background-image: url("datascience.JPG");
 }
 
 nav{
@@ -10,7 +17,7 @@ nav{
 	margin-left: 400px;
 	margin-right: 400px;
 	border: solid;
-	background-color: skyblue;
+	background-color: white;
 }
 #TP1{
 	margin-right: 20px;

@@ -1,7 +1,13 @@
 html{
 	background-image: url("background.JPG") ;
-	background-size:1000px ;
-	
+	background-size:1100px ;
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+.entiere{
+	display: flex;
 }
 #p1{
 	color: white;
@@ -11,13 +17,38 @@ html{
 	margin-top: 150px;
 }
 	
-#p2{
+#div1{
 	color: white;
-	text-align: center;
-	size: 300px;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-left: 500px;
 }
-#p3{
+#div2{
 	color: white;
-	text-align: center;
 	
+	font-size: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#div3{
+	color: white;
+	
+	font-size: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#div4{
+	color: white;
+	
+	font-size: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#p2{
+	color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	opacity: 1px;
+	font-size: 100px;
+	margin-bottom: 20px;
 }
